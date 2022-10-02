@@ -33,12 +33,7 @@ def mf_sgd(R, K=64, alpha=1e-4, beta=1e-2, iterations=50):
     training_loss = []
     pred = np.random.normal(scale=1. / K, size=(num_users, num_items))
     for iters in range(iterations):
-        """
-        TODO:
-        In this for-loop scope,
-        you need to (1)update "b_u"(vector of rating bias for users) and "b_i"(vector of rating bias for items)
-        and (2)update user and item latent feature matrices "P", "Q"
-        """
+       
         np.random.shuffle(samples)
         # i = , j = , r =
         for i, j, r in samples:
